@@ -8,10 +8,13 @@
     import ExperienceSection from '../components/sections/ExperienceSection.vue';
     import ProjectsSection from '../components/sections/ProjectsSection.vue';
     import ContactSection from '../components/sections/ContactSection.vue';
+    
     import { onMounted } from 'vue';
+    import { useRouter } from 'vue-router';
 
     import { useUserStore } from '../stores/user';
 
+    const router = useRouter();
     const userStore = useUserStore();
     userStore.isLoading = true;
 
@@ -19,12 +22,41 @@
         setTimeout(()=>{
             userStore.isLoading = false;
         }, 250)
+
+        const links = document.querySelectorAll('#MainMenu a');
+        const sections = document.querySelectorAll('.section');
+        // console.log(sections);
+        const observer = new IntersectionObserver((entries, observer)=>{
+            entries.forEach(section=>{
+                if(section.isIntersecting){
+                    const id = '#'+section.target.id;
+                    //router.push(id);
+                    links.forEach(link=>{
+                        link.classList.remove('active');
+                        if(link.attributes.href.nodeValue === id){
+                            link.classList.add('active');                        
+                        }
+                    })
+
+                    // setTimeout(()=>{
+                    //     userStore.isLoading = false;
+                    // }, 50)
+                }
+            })
+        }, {
+            threshold: .8,
+            rootMargin: '0px',
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        })
     })
 </script>
 
 <template>
     <MainLayout>
-        <div id="HomePage" class="max-w-[1200px] mx-auto px-3 py-3 bg-white rounded-lg">
+        <div id="HomePage" class="max-w-[1200px] mx-auto py-3 bg-white rounded-lg">
             
             <div class="">
                 <HomeSection />

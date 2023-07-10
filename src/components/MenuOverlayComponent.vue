@@ -16,7 +16,7 @@
 <template>
     
     <div id="MenuOverlayComponent" class="fixed z-50 bottom-0 h-full w-full bg-white overflow-scroll">
-        <div class="w-full flex items-center justify-between py-3 px-3 shadow-[0_0_10px_3px_rgba(0,0,0,0.15)] fixed z-[52] bg-white">
+        <div class="w-full flex items-center justify-between py-3 px-3 shadow-[0_0_10px_3px_rgba(0,0,0,0.15)] fixed z-[52] bg-white h-[80px] max-h-[80px]">
             <RouterLink to="/" @click="userStore.isMenuOverlay=false">
                 <img src="/logo-black.png" alt="logo deivisjoro dev" width="100">
             </RouterLink >
@@ -29,7 +29,7 @@
         <div class="w-full flex items-center justify-between pt-5 z-[51]">
             <nav id="MainMenuMobile" class="w-full px-4">
                 <ul class="w-full font-semibold text-indigo-950">
-                    <li @click="goTo('aaa')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('aaa')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">                             
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -39,7 +39,7 @@
                         </div>
 
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -48,7 +48,7 @@
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -57,7 +57,7 @@
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -66,7 +66,7 @@
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -75,7 +75,7 @@
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -84,7 +84,7 @@
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -95,7 +95,7 @@
                     </li>
                 </ul>
                 <ul class="w-full font-semibold text-indigo-950">
-                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -104,7 +104,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
@@ -113,7 +113,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100 cursor-pointer">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
                             <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">

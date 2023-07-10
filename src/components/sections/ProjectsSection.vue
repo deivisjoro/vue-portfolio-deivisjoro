@@ -1,5 +1,5 @@
 <template>
-    <h2>
-        Proyects Section
-    </h2>
+    <section class="flex min-h-[calc(100vh-110px)] items-center py-2 section" id="ProjectsSection">
+        Projcts Section
+    </section>
 </template>

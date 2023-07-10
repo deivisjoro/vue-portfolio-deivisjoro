@@ -5,13 +5,20 @@
 
     const userStore = useUserStore();
 
+    
+
+    const scrollToSection = (id)=>{
+        const section = document.getElementById(id);
+        section.scrollIntoView();
+    }
+
 </script>
 
 <template>
-    <div id="HeaderComponent" class="w-full fixed z-50">
+    <div id="HeaderComponent" class="w-full fixed z-50 h-[115px]">
 
         <div id="TopMenu" class="w-full bg-indigo-950 border-b md:block hidden">
-            <ul class="flex items-center justify-end text-sm text-white font-light px-2 h-8 max-w-[1200px]">
+            <ul class="flex items-center justify-end text-sm text-white font-light px-2 h-8 max-w-[1200px] mx-auto">
                 <li class="border-r border-r-gray-400 px-3 hover:text-amber-500">
                     <a href="#">
                         <Icon icon="ph:linkedin-logo" width="18" />
@@ -43,28 +50,28 @@
                     <nav id="MainMenu" class="w-full flex items-center justify-end px-2">
                         <ul class="flex items-center text-sm font-semibold text-indigo-950">
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">HOME</a>
+                                <a href="#HomeSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('HomeSection')" style="--i:1">HOME</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">ABOUT</a>
+                                <a href="#AboutSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('AboutSection')" style="--i:2">ABOUT</a>
                             </li>
                             <!-- <li class="px-2 py-1">
                                 <a href="#" class="hover:text-[#ff4646] hover:border-b py-1 hover:border-[#ff4646]">ABOUT</a>
                             </li> -->
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">EDUCATION</a>
+                                <a href="#EducationSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('EducationSection')" style="--i:3">EDUCATION</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">SKILLS</a>
+                                <a href="#SkillsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('SkillsSection')" style="--i:4">SKILLS</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">EXPERIENCE</a>
+                                <a href="#ExperienceSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ExperienceSection')" style="--i:5">EXPERIENCE</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">PROJECTS</a>
+                                <a href="#ProjectsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ProjectsSection')" style="--i:6">PROJECTS</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#" class="py-1 hover:text-[#ff4646]">CONTACT</a>
+                                <a href="#ContactSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ContactSection')" style="--i:7">CONTACT</a>
                             </li>                        
                         </ul>                    
                     </nav>
@@ -88,5 +95,27 @@
 
     #MainMenu ul a:hover:after{
         transform: scaleX(1); 
+    }
+
+    #MainMenu ul a.active:after{
+        transform: scaleX(1); 
+    }
+
+    @keyframes slideTop {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #MainMenu a{
+        display: inline-block;
+        opacity: 0;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.1s * var(--i));
     }
 </style>

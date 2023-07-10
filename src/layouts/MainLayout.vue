@@ -11,9 +11,9 @@
     <div id="MainLayout">
         <HeaderComponent></HeaderComponent>
 
-        <div class="lg:pt-[140px] md:pt-[130px] pt-[110px]"></div>
+        <div class="md:pt-[120px] pt-[90px]"></div>
 
-        <div class="min-h-[50vh] mb-[50px]">
+        <div class="min-h-[50vh] bg-white">
             <slot></slot>
         </div>        
 
