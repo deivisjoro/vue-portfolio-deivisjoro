@@ -3,51 +3,29 @@
     import { onMounted } from 'vue';
     import CardSkill from '../CardSkill.vue';
 
-    let span;
-	let product;
-	let product_page;
-	let l;
-	let movePer;
-	let maxMove;
-	// mobile_view	
-	let mob_view;
+    let skills;
+    let cont;
 
     onMounted(()=>{
-        span = document.getElementsByTagName('span');
-        product = document.getElementsByClassName('product')
-        product_page = Math.ceil(product.length/4);
-        l = 0;
-        movePer = 25.34;
-        maxMove = 203;
-        // mobile_view	
-        mob_view = window.matchMedia("(max-width: 768px)");
-        
-        
-        if (mob_view.matches){
-            movePer = 50.36;
-            maxMove = 504;
-        }
-
+        skills = document.getElementsByClassName('skill');
+        cont = 0;
     })
 
-	let right_mover = ()=>{
-		l = l + movePer;
-		if (product == 1){l = 0; }
-		for(const i of product)
-		{
-			if (l > maxMove){l = l - movePer;}
-			i.style.left = '-' + l + '%';
-		}
 
+	const right_mover = ()=>{
+        if(cont==(skills.length-1)) cont = 0;
+        else cont++;
+
+        for(const skill of skills){
+            skill.style.left = ((-1)*((cont*skill.offsetWidth)+(cont*15))) + 'px';
+		}
 	}
-	let left_mover = ()=>{
-        
-		l = l - movePer;
-		if (l<=0){l = 0;}
-		for(const i of product){
-			if (product_page>1){
-				i.style.left = '-' + l + '%';
-			}
+
+	const left_mover = ()=>{
+        if(cont==0) cont = skills.length-1;
+        else cont--;      
+        for(const skill of skills){
+            skill.style.left = ((-1)*((cont*skill.offsetWidth)-(cont*15))) + 'px';
 		}
 	}
 
@@ -62,310 +40,58 @@
             <h2 class="mx-2 font-semibold text-2xl text-indigo-950">MY SKYLLS & TOOLS</h2>
             <div class="h-[1px] bg-red-600 flex-1">&nbsp;</div>
         </div>
+        <div class="px-3">
+            <header class="flex justify-between my-4">
+                <h3 class="font-semibold text-indigo-950">Main tools & technologies</h3>
+                <p class="text-semibold text-lg flex">
+                    <span @click="left_mover" class="px-2 border-solid border-2 border-indigo-950 mr-1 text-sm cursor-pointer rounded-md hover:text-white hover:bg-indigo-950 flex items-center justify-center">&lt;</span>
+                    <span @click="right_mover" class="px-2 border-solid border-2 border-indigo-950 text-sm cursor-pointer rounded-md hover:text-white hover:bg-indigo-950 flex items-center justify-center">&gt;</span>
+                </p>
+		    </header>
+            <div class="px-4 py-4 bg-slate-100 rounded-xl">
+                <section class="flex items-center gap-x-4 slider overflow-x-hidden">
+                    <CardSkill class="skill" title="HTML" icon="mdi:language-html5" iconColor="#ff4c1e" experience="15" category="Frontend" level="90" :items="['HTML5', 'Semantic']" />
 
-        <!-- <div>
-            <header class="w-[98%] my-0 mx-auto flex items-center justify-between p-2">
-                <h3 class="text-indigo-950 text-2xl">
-                    xxxxxxx
-                </h3>
+                    <CardSkill class="skill" title="CSS" icon="ion:logo-css3" iconColor="#006bc0" experience="15" category="Frontend" level="80" :items="['Media Query', 'Flexbox', 'Normalize', 'Bootstrap', 'Font Awesome', 'Animate', 'TailwindCSS', 'SASS', 'Responsible Design', 'Mobile First']" :iconsItems="[{name: 'mdi:sass', color:'#c65f91'}, {name: 'mdi:tailwind', color:'#07b0ce'}, {name: 'ri:bootstrap-line', color:'#7b11f8'}]" />
 
-                <div class="flex">
-                    <span class="text-2xl cursor-pointer rounded-md text-indigo-950 hover:text-white hover:bg-indigo-950 flex items-center justify-center px-3" @click="fnPrev"> &lt; </span>
-                    <span class="text-2xl cursor-pointer rounded-md text-indigo-950 hover:text-white hover:bg-indigo-950 flex items-center justify-center px-3" fnNext> &gt; </span>
-                </div>                
+                    <CardSkill class="skill" title="Javascript" icon="tabler:brand-javascript" iconColor="#ffdf00" experience="15" category="Frontend" level="85" :items="['ES6+', 'Fetch API', 'JQuery', 'JQuery UI', 'SPA', 'DOM', 'API Rest', 'JSON', 'JWT']" :iconsItems="[ {name: 'mdi:code-json', color:'#9777a8'}, {name: 'mdi:jquery', color:'#0863a2'}]" />
 
-            </header>
-            
+                    <CardSkill class="skill" title="Design UI" icon="mdi:image-edit-outline" experience="10" category="Design" level="50" :items="['Firework', 'Figma']" :iconsItems="[ {name: 'skill-icons:figma-light'}]" />	
 
+                    <CardSkill class="skill" title="Frameworks JS" icon="teenyicons:javascript-outline" experience="3" category="Frontend" level="65" :items="['Angular', 'React', 'Vue', 'Vue Router', 'Vuex', 'Pinia']" :iconsItems="[ {name: 'devicon:angularjs'}, {name: 'logos:react'}, {name: 'devicon:vuejs'}]" />	
 
+                    <CardSkill class="skill" title="NodeJS" icon="devicon:nodejs" experience="4" category="Backend" level="70" :items="['API REST', 'Express', 'Mongoose', 'EJS', 'Handlebars']" :iconsItems="[ {name: 'devicon:express'}]" />                    
 
-        </div> -->
-        <main>
-            <header>
-			<h1>Top Hottest Products</h1>
-			<p>
-				<span @click="left_mover">a</span>
-				<span @click="right_mover">b</span>
-			</p>
-		</header>
-		<section>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product One</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Two</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Three</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Four</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Five</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Six</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Seven</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Eight</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Nine</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Ten</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Eleven</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-			<div class="product">
-				<picture>
-					<img src="" alt="">
-				</picture>
-				<div class="detail">
-					<p>
-						<b>Product Twelve</b><br>
-						<small>New arrival</small>
-					</p>
-					<samp>$45.00</samp>
-				</div>
-				<div class="button">
-					<p class="star">
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-						<strong>&star;</strong>
-					</p>
-					<a href="#">Add-cart</a>
-				</div>
-			</div>
-		</section>
+                    <CardSkill class="skill" title="PHP" icon="devicon:php" experience="10" category="Backend" level="80" :items="['PHP', 'PHP OO', 'CakePHP', 'Laravel', 'Smarty']" :iconsItems="[ {name: 'devicon:cakephp'}, {name: 'devicon:laravel'}]" />
 
-        </main>
+                    <CardSkill class="skill" title="TypeScript" icon="devicon:typescript" experience="2" category="Backend/Frontend" level="70" /> 
 
-        <!-- <div class="bg-slate-100 rounded-lg mx-4 mt-4 py-4 slider gap-4">
+                    <CardSkill class="skill" title="Java" icon="devicon:java" experience="10" category="Backend/Desktop" level="70" :items="['JSE', 'JEE', 'JSP', 'Servlets', 'Swing', 'JDBC', 'Spring Boot']" :iconsItems="[ {name: 'simple-icons:springboot', color: '#67aa3c'}]" />   
+                    
+                    <CardSkill class="skill" title="Python" icon="devicon:python" experience="2" category="Backend" level="40" />
 
-            <CardSkill />
-            <CardSkill />
-            <CardSkill />
-            <CardSkill />
-            <CardSkill />
+                    <CardSkill class="skill" title="C++" icon="devicon:cplusplus" experience="1" category="Desktop" level="40" />   	
 
-        </div> -->
+                    <CardSkill class="skill" title="BD" icon="bi:database" experience="10" category="Database" level="80" :items="['SQL', 'MySQL', 'PostgreSQL', 'MongoDB']" :iconsItems="[ {name: 'skill-icons:mysql-light'}, {name: 'devicon:mongodb'}]" />
+
+                    <CardSkill class="skill" title="Tools" icon="vscode-icons:folder-type-tools" experience="4" category="Frontend/Backend" level="80" :items="['VS Code', 'Vite', 'WebPack', 'DevTools', 'Eclipse', 'Netbeans', 'Postman', 'Git', 'GitHub', 'Supabase', 'Excel']" :iconsItems="[ {name: 'skill-icons:vscode-light'}, {name: 'vscode-icons:file-type-vite'}, {name: 'skill-icons:webpack-light'}]" />
+
+                    <CardSkill class="skill" title="Testing" icon="vscode-icons:folder-type-test" experience="1" category="Testing" level="60" :items="['Unit testing', 'Vitest', 'JUnit', 'Screen Play', 'Serenety', 'Cucumber', 'Gherkin']" />
+
+                    <CardSkill class="skill" title="Sys Admin" icon="clarity:rack-server-solid-badged" experience="2" category="Sys Admin" level="60" :items="['Linux', 'Ubuntu Server', 'Apache', 'Tomcat', 'SSH', 'DNS']" />	
+
+                    <CardSkill class="skill" title="Android Studio" icon="skill-icons:androidstudio-light" experience="1" category="Mobile" level="50" />	
+
+                    <CardSkill class="skill" title="Arduino" icon="devicon:arduino" experience="1" category="Mobile" level="50" />
+
+                    <CardSkill class="skill" title="English" icon="game-icons:usa-flag" experience="1" category="Language" level="50" />
+
+                    <CardSkill class="skill" title="Soft Skills" icon="icon-park:personal-privacy" experience="10" category="Soft Skills" level="70" :items="['Communication', 'Organizational', 'Teamwork', 'Adaptability', 'Creativity', 'Decision-Making']" />	
+                
+                </section>
+            </div>
+
+        </div>
 
     </section>
 </template>
@@ -376,119 +102,10 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     } */
 
-    main header{
-			width: 98%;
-			height: 60px;
-			margin: 0 auto;
-			/*background: gray;*/
-			display: flex;
-			align-items: center;
-			padding: 20px;
-			justify-content: space-between;
-			border-bottom: 2px solid #ddd;
-		}
-		main header p span{
-			font-size: 40px;
-		    margin: 0 5px;
-		    cursor: pointer;
-		    color: #555;
-		     width: 30px;
-		    height: 30px;
-		    display: inline-block;
-		    line-height: 19px;
-		    text-align: center;
-		    border-radius: 3px;
-		}
-		main header p span:hover{
-			background: #222;
-    		color: white;
-		}
-		main section{
-			width: 98%;
-			height: 300px;
-			/*background: red;*/
-			margin: auto;
-			display: flex;
-			align-items: center;
-			overflow-x: auto;
-		}
-		main section::-webkit-scrollbar{
-			display: none;
-		}
-		main section .product{
-			min-width: 24%;
-			height: 90%;
-			background: whitesmoke;
-			margin:  0 20px  0 0;
-			border-radius: 20px;
-			position: relative;
-			left: 0;
-			transition: 0.5s;
-
-		}
-		main picture{
-			width: 100%;
-			height: 70%;
-			padding: 20px;
-			/*background: green;*/
-			display: flex;
-			overflow: hidden;
-			margin-bottom: 20px;
-		}
-		main picture img{
-			width: 100%;
-		}
-		main .detail,
-		main .button{
-			width: 90%;
-			/*background: red;*/
-			margin: auto;
-			padding: 5px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height: 50px;
-			font-size: 20px;
-			color: #444;
-		}
-		main small{color: #555;}
-		main a{
-			text-decoration: none;
-			padding: 6px 14px;
-		    font-size: 15px;
-		    margin: 5px 0 0 20px;
-		    display: inline-block;
-		    background: #6773ff;
-		    color: white;
-		}
-		main p.star{
-			margin: 5px auto;
-		    width: 65%;
-		    font-size: 25px;
-		    color: #808080;
-		}
-		@media (max-width: 768px) {
-			main .text h1{
-				font-size: 35px;
-			}
-			main .text p{
-				width: 90%;
-			}
-			main header h1{
-				font-size: 25px;
-			}
-			main header p span{
-				font-size: 30px;
-			}
-			main section .product {
-				min-width: 49%;
-				margin:  0 10px  0 0;
-			}
-			main .detail, .button{
-				font-size: 16px;
-			}
-			main a{
-				padding: 6px 10px;
-			}
-		}
+    slider::-webkit-scrollbar{
+        /* display: none; */
+        background-color: red;
+    }
+		
+		
 </style>

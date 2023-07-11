@@ -11,6 +11,12 @@
         return router.push(`/${url}`);
     }
 
+    const scrollToSection = (id)=>{
+        const section = document.getElementById(id);
+        userStore.isMenuOverlay = false;
+        section.scrollIntoView();
+    }
+
 </script>
 
 <template>
@@ -29,9 +35,9 @@
         <div class="w-full flex items-center justify-between pt-5 z-[51]">
             <nav id="MainMenuMobile" class="w-full px-4">
                 <ul class="w-full font-semibold text-indigo-950">
-                    <li @click="goTo('aaa')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">                             
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('HomeSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="line-md:home-md" width="24" class="mr-2" /> HOME
                                 </div>                                
@@ -39,54 +45,54 @@
                         </div>
 
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('AboutSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="line-md:account-alert" width="24" class="mr-2" /> ABOUT
                                 </div>                                
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('EducationSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="basil:university-outline" width="24" class="mr-2" /> EDUCATION
                                 </div>                                
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('SkillsSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="ic:baseline-add-task" width="24" class="mr-2" /> SKILLS
                                 </div>                                
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('ExperienceSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="bi:person-workspace" width="24" class="mr-2" /> EXPERIENCE
                                 </div>                                
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('ProjectsSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="mdi:projector-screen-outline" width="24" class="mr-2" /> PROJECTS
                                 </div>                                
                             </a>
                         </div>
                     </li>
-                    <li @click="goTo('bbb')" class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
+                    <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('ContactSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
                                     <Icon icon="ic:outline-contact-phone" width="24" class="mr-2" /> CONTACT
                                 </div>                                

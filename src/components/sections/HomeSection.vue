@@ -50,6 +50,9 @@
                     </p>
                     <div class="description flex justify-center md:justify-start flex-col text-indigo-950">
                         <p class="text-lg font-light leading-6 flex justify-center md:justify-start md:text-justify text-center">I'am a Full stack web developer, System admin, Developer Apps Desktop, freelancer with experience for over 15 years. My expertise is creating applications with the javascript ecosystem and many more</p>
+                        <p class="text-lg font-light leading-6 flex justify-center md:justify-start md:text-justify text-center">
+                            I have also worked in teaching and research
+                        </p>
                         <p class="text-lg font-light leading-6 mb-3 flex justify-center md:justify-start mt-2">Based in Cerete, Colombia</p>
                     </div>
                     <div class="mt-4 btn-cv flex justify-center md:justify-start">

@@ -1,6 +1,6 @@
 <script setup>
     import { computed, ref } from "vue";
-    import ItemMenuEducation from "../ItemMenuEducation.vue";
+    import ItemMenu from "../ItemMenu.vue";
 
     const itemActive = ref(1);
     const viewAll = ref(false);
@@ -156,24 +156,24 @@
           <ul
             class="text-center font-semibold text-xs md:text-sm text-stone-500 md:border-r md:border-b-0 border-b border-solid border-slate-400 flex md:flex-col flex-row w-100 flex-wrap"
           >
-            <ItemMenuEducation :itemActive="itemActive" text="High Schools" item="1" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="High Schools" item="1" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="Technical" item="2" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="Technical" item="2" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="University Degrees" item="3" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="University Degrees" item="3" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="University Postgraduates" item="4" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="University Postgraduates" item="4" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="Further Training" item="5" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="Further Training" item="5" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="Short Courses" item="6" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="Short Courses" item="6" @openView="fnOpenView($event)" />
 
-            <ItemMenuEducation :itemActive="itemActive" text="View All" item="7" @openView="fnOpenView($event)" />
+            <ItemMenu :itemActive="itemActive" text="View All" item="7" @openView="fnOpenView($event)" />
           </ul>
         </nav>
       </div>
       <div class="w-full">
-        <div class="md:ml-20 ml-5" v-if="itemActive===1 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===1 || viewAll">
           <h3 class="text-red-500 underline py-4 text-xl font-semibold">High Schools</h3>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-6">
@@ -208,7 +208,7 @@
           </ol>
         </div>
 
-        <div class="md:ml-20 ml-5" v-if="itemActive===2 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===2 || viewAll">
           <h3 class="text-red-500 underline py-4 text-xl font-semibold">Technical</h3>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-6">
@@ -243,7 +243,7 @@
           </ol>
         </div>
 
-        <div class="md:ml-20 ml-5" v-if="itemActive===3 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===3 || viewAll">
           <h3 class="text-red-500 underline py-4 text-xl font-semibold">University Degrees</h3>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-6">
@@ -307,7 +307,7 @@
           </ol>
         </div>
 
-        <div class="md:ml-20 ml-5" v-if="itemActive===4 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===4 || viewAll">
           <h3 class="text-red-500 underline py-4 text-xl font-semibold">University Postgraduates</h3>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-6">
@@ -400,7 +400,7 @@
           </ol>
         </div>
 
-        <div class="md:ml-20 ml-5" v-if="itemActive===5 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===5 || viewAll">
           <h3 class="text-red-500 underline py-4 text-xl font-semibold">Further training</h3>
           <ol class="relative border-l border-gray-200 dark:border-gray-700">
             <li class="mb-10 ml-6">
@@ -551,7 +551,7 @@
           </ol>
         </div>
 
-        <div class="md:ml-20 ml-5" v-if="itemActive===6 || viewAll">
+        <div class="md:ml-10 ml-5" v-if="itemActive===6 || viewAll">
             <div class="flex items-center justify-between">
 
                 <h3 class="text-red-500 underline py-4 text-xl font-semibold">

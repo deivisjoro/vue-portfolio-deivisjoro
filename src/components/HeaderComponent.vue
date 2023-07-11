@@ -36,7 +36,7 @@
                 </li>                
             </ul>
         </div>
-        <div id="MainHeader" class="w-full bg-white flex items-center">
+        <div id="MainHeader" class="w-full bg-white flex items-center shadow-md">
             <div class="flex justify-between gap-10 max-w-[1200px] w-full px-3 py-3 mx-auto items-center">
                 <RouterLink to="/" class="min-w-[100px]">
                     <img src="/logo-black.png" alt="logo deivisjoro" width="100" />
