@@ -11,12 +11,14 @@
             id: 1,
             name: 'Development',
             elements: [
-                {rol: 'Web developer', time: '2005 - 2015', company: 'Group SOCRATES', description: ''},
-                {rol: 'Web developer', time: '2011 - 2013', company: 'DataSistemas', description: ''},
-                {rol: 'Web developer', time: '2009 - 2010', company: 'Com Center', description: ''},
-                {rol: 'Web developer', time: '2009 - 2010', company: 'ATR Software', description: ''},
-                {rol: 'Web developer', time: '2011', company: 'LFM S.A.S', description: ''},
+                {rol: 'Developer', time: '2022-2023', company: 'Freelancer', description: ''},
+                {rol: 'Frontend Developer', time: '2021', company: 'Conocimiento Corporativo', description: ''},
                 {rol: 'Developer Java', time: '2020', company: 'Camu San Pelayo', description: ''},
+                {rol: 'Web developer', time: '2005 - 2015', company: 'Group SOCRATES', description: ''},
+                {rol: 'Web developer', time: '2011 - 2013', company: 'DataSistemas', description: ''},                
+                {rol: 'Web developer', time: '2011', company: 'LFM S.A.S', description: ''}, 
+                {rol: 'Web developer', time: '2009 - 2010', company: 'ATR Software', description: ''},  
+                {rol: 'Web developer', time: '2009 - 2010', company: 'Com Center', description: ''},                             
             ]
         },
         {
@@ -74,11 +76,11 @@
 </script>
 
 <template>
-    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 section" id="ExperienceSection">
+    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 ExperienceSection">
         
         <div class="w-full flex items-center">
             <div class="w-[20%] h-[1px] bg-red-600">&nbsp;</div>
-            <h2 class="mx-2 font-semibold text-2xl text-indigo-950">EXPERIENCE</h2>
+            <h2 class="mx-2 font-semibold text-2xl text-indigo-950 section" id="ExperienceSection">EXPERIENCE</h2>
             <div class="h-[1px] bg-red-600 flex-1">&nbsp;</div>
         </div>
 

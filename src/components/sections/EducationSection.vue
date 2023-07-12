@@ -142,12 +142,11 @@
 
 <template>
   <section
-    class="min-h-[calc(100vh-110px)] pt-[120px] px-2 section"
-    id="EducationSection"
+    class="min-h-[calc(100vh-110px)] pt-[120px] px-2 EducationSection"
   >
     <div class="w-full flex items-center">
       <div class="w-[20%] h-[1px] bg-red-600">&nbsp;</div>
-      <h2 class="mx-2 font-semibold text-2xl text-indigo-950">EDUCATION</h2>
+      <h2 class="mx-2 font-semibold text-2xl text-indigo-950 section" id="EducationSection">EDUCATION</h2>
       <div class="w-full h-[1px] bg-red-600">&nbsp;</div>
     </div>
     <div class="flex mt-10 md:flex-row flex-col md:mb-10 mb-0">
@@ -422,14 +421,14 @@
               <h4
                 class="flex items-center mb-1 text-lg font-semibold text-indigo-950"
               >
-              San Martin University Foundation
+                Diploma in university teaching and pedagogy by competences
               </h4>
               <time
                 class="block mb-2 text-sm font-normal leading-none text-gray-500"
                 >2013 - 140 hours</time
               >
               <p class="mb-4 text-base font-normal text-gray-400">
-                Diploma in university teaching and pedagogy by competences
+                San Martin University Foundation
               </p>
             </li>
             <li class="mb-10 ml-6">

@@ -14,15 +14,17 @@
 </script>
 
 <template>
-    <section class="flex min-h-[calc(100vh-150px)] py-2 px-2 section" id="HomeSection">
-        <div class="flex items-center md:flex-row flex-col justify-between w-full z-[2]">
+    <section class="min-h-[calc(100vh-110px)] px-4 HomeSection">
+        <div class="md:pt-[140px] pt-[120px]"></div>
+        <div class="relative flex items-center md:flex-row flex-col justify-between w-full z-[2]">
             <div class="md:w-full">
                 <div>
-                    <div class="mb-2 text-indigo-950 text-2xl font-medium leading-5 flex justify-center md:justify-start">
-                        Hi <span class="wave">👋</span>, i'm
+                    <div class="mb-2 text-indigo-950 text-2xl font-medium leading-5 flex justify-center md:justify-start items-center">
+                        Hi <span class="wave">👋</span>, i'm 
                     </div>
+                    <div class="text-5xl mb-3 md:text-left text-center font-extrabold text-indigo-950 section" id="HomeSection">DEIVIS RODRIGUEZ</div>
 
-                    <div class="my-4 opacity-100 transform-none flex justify-center md:justify-start">
+                    <!-- <div class="my-4 opacity-100 transform-none flex justify-center md:justify-start">
                         <div class="w-[300px] h-[68px] overflow-hidden relative flex justify-center md:justify-start">
                             
                             <img src="/fullname.svg" alt="image fullname" class="absolute z-[1] top-0 left-0 right-0">
@@ -30,7 +32,7 @@
                             <video autoplay muted loop="" preload="auto" class="absolute z-0 top-0 left-[1px] right-[1px] w-[100%] h-[100%]"><source src="/gradient.mp4">
                             </video>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!-- inicio-->
                     <!-- <div class="relative w-[300px] h-[80px]">
@@ -162,7 +164,6 @@
         />
     </section>
 </template>
-
 <style scoped>
     .wave {
         animation-name: wave-animation;
@@ -259,17 +260,19 @@
     .role{
         opacity: 0;
         animation: slideRight 1s ease forwards;
+        animation-delay: 2.1s;
     }
 
     .description{
         opacity: 0;
         animation: slideLeft 1.5s ease forwards;
+        animation-delay: 2.1s;
     }
 
     .btn-cv{
         opacity: 0;
         animation: slideTop 0.5s ease forwards;
-        animation-delay: 1s;
+        animation-delay: 2.5s;
     }
 
     .home-img{
@@ -277,13 +280,13 @@
         aspect-ratio: 1 / 1;
         opacity: 0;
         animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-        animation-delay: 1s, 2s;
+        animation-delay: 2.5s, 3s;
     }
 
     #typewriter{
         opacity: 0;
         animation: zoomIn 1s ease forwards;
-        animation-delay: 1.4s;
+        animation-delay: 3.2s;
     }
 
     .shape-circle {

@@ -44,7 +44,7 @@
                 }
             })
         }, {
-            threshold: .8,
+            threshold: 1,
             rootMargin: '0px',
         });
 

@@ -12,9 +12,9 @@
     }
 
     const scrollToSection = (id)=>{
-        const section = document.getElementById(id);
+        const section = document.getElementsByClassName(id);
         userStore.isMenuOverlay = false;
-        section.scrollIntoView();
+        section[0].scrollIntoView();
     }
 
 </script>

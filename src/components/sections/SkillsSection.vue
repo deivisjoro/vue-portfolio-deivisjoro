@@ -33,11 +33,11 @@
 </script>
 
 <template>
-    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 section" id="SkillsSection">
+    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 SkillsSection">
         
         <div class="w-full flex items-center">
             <div class="w-[20%] h-[1px] bg-red-600">&nbsp;</div>
-            <h2 class="mx-2 font-semibold text-2xl text-indigo-950">MY SKYLLS & TOOLS</h2>
+            <h2 class="mx-2 font-semibold text-2xl text-indigo-950 section" id="SkillsSection">MY SKYLLS & TOOLS</h2>
             <div class="h-[1px] bg-red-600 flex-1">&nbsp;</div>
         </div>
         <div class="px-3">

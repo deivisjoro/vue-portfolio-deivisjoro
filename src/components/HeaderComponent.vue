@@ -4,12 +4,11 @@
     import { Icon } from '@iconify/vue';
 
     const userStore = useUserStore();
-
     
 
     const scrollToSection = (id)=>{
-        const section = document.getElementById(id);
-        section.scrollIntoView();
+        const section = document.getElementsByClassName(id);
+        section[0].scrollIntoView();
     }
 
 </script>
@@ -50,28 +49,28 @@
                     <nav id="MainMenu" class="w-full flex items-center justify-end px-2">
                         <ul class="flex items-center text-sm font-semibold text-indigo-950">
                             <li class="px-2 py-1">
-                                <a href="#HomeSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('HomeSection')" style="--i:1">HOME</a>
+                                <a href="#HomeSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('HomeSection')" style="--i:1" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*1))+'s' : (0.1*1)+'s' }">HOME</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#AboutSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('AboutSection')" style="--i:2">ABOUT</a>
+                                <a href="#AboutSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('AboutSection')" style="--i:2" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*2))+'s' : (0.1*2)+'s' }">ABOUT</a>
                             </li>
                             <!-- <li class="px-2 py-1">
                                 <a href="#" class="hover:text-[#ff4646] hover:border-b py-1 hover:border-[#ff4646]">ABOUT</a>
                             </li> -->
                             <li class="px-2 py-1">
-                                <a href="#EducationSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('EducationSection')" style="--i:3">EDUCATION</a>
+                                <a href="#EducationSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('EducationSection')" style="--i:3" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*3))+'s' : (0.1*3)+'s' }">EDUCATION</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#SkillsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('SkillsSection')" style="--i:4">SKILLS</a>
+                                <a href="#SkillsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('SkillsSection')" style="--i:4" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*4))+'s' : (0.1*4)+'s' }">SKILLS</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#ExperienceSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ExperienceSection')" style="--i:5">EXPERIENCE</a>
+                                <a href="#ExperienceSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ExperienceSection')" style="--i:5" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*5))+'s' : (0.1*5)+'s' }">EXPERIENCE</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#ProjectsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ProjectsSection')" style="--i:6">PROJECTS</a>
+                                <a href="#ProjectsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ProjectsSection')" style="--i:6" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*6))+'s' : (0.1*6)+'s' }">PROJECTS</a>
                             </li>
                             <li class="px-2 py-1">
-                                <a href="#ContactSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ContactSection')" style="--i:7">CONTACT</a>
+                                <a href="#ContactSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ContactSection')" style="--i:7" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*7))+'s' : (0.1*7)+'s' }">CONTACT</a>
                             </li>                        
                         </ul>                    
                     </nav>
@@ -116,6 +115,8 @@
         display: inline-block;
         opacity: 0;
         animation: slideTop .5s ease forwards;
-        animation-delay: calc(.1s * var(--i));
+        transform: translateY(100px);
+        /* animation-delay: calc((0.1s * var(--i)) + attr(data-intro)); */
+        
     }
 </style>

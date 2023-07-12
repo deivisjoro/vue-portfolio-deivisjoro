@@ -4,19 +4,19 @@
 </script>
 
 <template>
-    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 section" id="AboutSection">
+    <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 AboutSection">
         <div class="w-full flex items-center">
             <div class="w-[20%] h-[1px] bg-red-600">
                 &nbsp;
             </div>
-            <h2 class="mx-2 font-semibold text-2xl text-indigo-950">ABOUT</h2>
+            <h2 class="mx-2 font-semibold text-2xl text-indigo-950 section" id="AboutSection">ABOUT</h2>
             <div class="w-full h-[1px] bg-red-600">
                 &nbsp;
             </div>
         </div>
         <div class="text-indigo-950 mx-2 px-2 mt-3 text-sm flex items-center w-full flex-col md:flex-row">
             <div class="text-white mr-4">
-                <div>
+                <div class="flex md:flex-col flex-row">
                     <div class="relative w-[100px] h-[100px] bg-indigo-950 rounded-full text-center m-[20px] flex items-center justify-center">
                         <div>
                             <h5 class="absolute top-[-5px] left-0 w-[35px] h-[35px] bg-amber-400 rounded-full leading-[5px] font-medium  flex items-center justify-center">15+</h5>
@@ -36,11 +36,11 @@
                 </div>
             </div>
             <div class="px-3">
-                <div class="mt-2 flex items-center">
-                    <Icon icon="line-md:account-alert" class="mr-2 w-[50px] h-[50px]" /> 
+                <div class="mt-2 flex items-center">                    
                     <p class="text-justify">
                         Hello, my name is Deivis Rodriguez Ortiz, I have a degree in Computer Science and Systems Engineer and I love programming, especially web application development projects.
                     </p>
+                    <Icon icon="line-md:account-alert" class="ml-2 w-[50px] h-[50px]" /> 
                 </div>
                 <div class="mt-2 flex items-center">
                     
@@ -51,10 +51,11 @@
                 </div>
     
                 <div class="mt-2 flex items-center">
-                    <Icon icon="bi:person-workspace" class="mr-2 w-[50px] h-[50px]" /> 
+                    
                     <p class="text-justify">
                         With the rise of technology, I began in the internet world to develop applications for this environment, offering solutions implementing applications in the educational sector, many of these applications developed with the LAMP stack, working heavily with PHP and MySQL and the basic technologies of web development.
                     </p>
+                    <Icon icon="bi:person-workspace" class="ml-2 w-[50px] h-[50px]" /> 
                 </div>
     
                 <div class="mt-2 flex items-center">                    
