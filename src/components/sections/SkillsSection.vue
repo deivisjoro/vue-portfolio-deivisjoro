@@ -17,7 +17,7 @@
         else cont++;
 
         for(const skill of skills){
-            skill.style.left = ((-1)*((cont*skill.offsetWidth)+(cont*15))) + 'px';
+            skill.style.left = ((-1)*cont*skill.offsetWidth) + 'px';
 		}
 	}
 
@@ -25,7 +25,7 @@
         if(cont==0) cont = skills.length-1;
         else cont--;      
         for(const skill of skills){
-            skill.style.left = ((-1)*((cont*skill.offsetWidth)-(cont*15))) + 'px';
+            skill.style.left = ((-1)*cont*skill.offsetWidth) + 'px';
 		}
 	}
 
@@ -49,7 +49,7 @@
                 </p>
 		    </header>
             <div class="px-4 py-4 bg-slate-100 rounded-xl">
-                <section class="flex items-center gap-x-4 slider overflow-x-hidden">
+                <section class="flex items-center slider overflow-x-hidden">
                     <CardSkill class="skill" title="HTML" icon="mdi:language-html5" iconColor="#ff4c1e" experience="15" category="Frontend" level="90" :items="['HTML5', 'Semantic']" />
 
                     <CardSkill class="skill" title="CSS" icon="ion:logo-css3" iconColor="#006bc0" experience="15" category="Frontend" level="80" :items="['Media Query', 'Flexbox', 'Normalize', 'Bootstrap', 'Font Awesome', 'Animate', 'TailwindCSS', 'SASS', 'Responsible Design', 'Mobile First']" :iconsItems="[{name: 'mdi:sass', color:'#c65f91'}, {name: 'mdi:tailwind', color:'#07b0ce'}, {name: 'ri:bootstrap-line', color:'#7b11f8'}]" />

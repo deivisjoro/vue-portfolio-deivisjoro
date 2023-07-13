@@ -9,7 +9,7 @@
 
 <template>
     
-    <div class="flex flex-col justify-center items-center grow relative left-0 duration-500 min-w-[100%] sm:min-w-[50%] md:min-w-[32%] lg:min-w-[24%] xl:min-w-[19%] mx-auto self-stretch">
+    <div class="flex flex-col justify-center items-center grow relative left-0 duration-500 min-w-[100%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] xl:min-w-[20%] mx-auto self-stretch px-2">
         <div class="!z-5 relative flex flex-col rounded-[20px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full h-full !p-4 3xl:p-![18px] bg-white undefined">
             <div class="h-full w-full flex flex-col justify-between">
                 <div>

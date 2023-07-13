@@ -8,27 +8,163 @@
      
     onMounted(()=>{
       items = document.querySelector('.projects-container').children;   
+      sortAndShow();
     })
 
     const sortAndShow = (e) => {
-      const dataTarget = e.target.getAttribute('data-target'); 
-      filter.value = dataTarget;    
+      let dataTarget = 'development';
 
-        for (let i = 0; i < items.length; i++) {
-            items[i].classList.remove('active');
-            items[i].classList.add('delete');
+      if(e){
+        dataTarget = e.target.getAttribute('data-target');          
+      }
 
-            if (items[i].getAttribute('data-category') == dataTarget || dataTarget == "all") {
-              items[i].classList.remove('delete');
-              items[i].classList.add('active');
-            }
-        }
+      filter.value = dataTarget;
+
+      for (let i = 0; i < items.length; i++) {
+          items[i].classList.remove('active');
+          items[i].classList.add('delete');
+
+          if (items[i].getAttribute('data-category') == dataTarget || dataTarget == "all") {
+            items[i].classList.remove('delete');
+            items[i].classList.add('active');
+          }
+      }
   
     }
+
+    const projects = [
+      {
+        id: 1,
+        title: 'SAPA',
+        acronimus: 'Sistema Automatizado para Procesos de Acreditacion',
+        description: 'SAPA is a support application for the Self-Assessment of higher education academic programs, which offers an automated component for the preparation of the "Self-Assessment" section. The Application aims to facilitate the calculation processes involved in the "Self-Assessment Report", based on a statistical model created by the University of Córdoba',
+        features: 'modules for 9 types of users, test application, roles, graphic reports',
+        imagesUrl: '/images/projects/sapa/',
+        cover: 'cover.png',
+        images: ['sapa1.png', 'sapa2.png', 'sapa3.png', 'sapa4.png', 'sapa5.png', 'sapa6.png', 'sapa7.png', 'sapa8.png', 'sapa9.png', 'sapa10.png', 'sapa11.png', 'sapa12.png', 'sapa13.png', 'sapa14.png', 'sapa15.png', 'sapa16.png', 'sapa17.png', 'sapa18.png', 'sapa19.png', 'sapa20.png', 'sapa21.png', 'sapa22.png',],
+        url: '',
+        github: '',
+        category: 'development',
+        type: 'Web',
+        languaje: 'PHP',
+        kind: 'Statistical',
+        stack: [
+          'PHP', 'MySQL', 'Linux', 'CSS', 'HTML', 'Smarty', 'jpgraph', 'Pear', 'POO'
+        ],
+        isPublic: false,
+        company: 'Group SOCRATES'
+      },
+      {
+        id: 2,
+        title: 'AppControl',
+        acronimus: 'App de Control entradas / salidas',
+        description: 'Application for the control of exits and entrances of medicines from the Camú de San Pelayo pharmacy',
+        features: 'inventory, suppliers, medicines, reports, purchases, sales',
+        imagesUrl: '/images/projects/appcontrol/',
+        cover: 'cover.png',
+        images: [],
+        url: '',
+        github: '',
+        category: 'desktop',
+        type: 'Desktop',
+        languaje: 'Java',
+        kind: 'Inventory Control',
+        stack: [
+          'Java', 'SQLite', 'Swing', 'Jasper Report'
+        ],
+        isPublic: false,
+        company: 'CAMU San Pelayo'
+      },
+      {
+        id: 3,
+        title: 'DatasisWeb',
+        acronimus: 'Plataforma de control e información académica para instituciones educativas',
+        description: 'Plataforma de control e información académica para instituciones educativas',
+        features: 'matriculas, informes, cargas academicas, estudiantes, docentes, calificaciones, boletines',
+        imagesUrl: '/images/projects/datasisweb/',
+        cover: 'cover.png',
+        images: [],
+        url: '',
+        github: '',
+        category: 'development',
+        type: 'Web',
+        languaje: 'CakePHP',
+        kind: 'Academic Management',
+        stack: [
+          'PHP', 'CakePHP', 'MySQL', 'Javascript', 'JQuery', 'CSS', 'HTML', 'Ajax'
+        ],
+        isPublic: false,
+        company: 'Data Sistemas'
+      },      
+      {
+        id: 4,
+        title: 'AVES',
+        acronimus: 'Ambiente Virtual de Educación Superior',
+        description: 'Ambiente Virtual de Educación Superior',
+        features: 'matriculas, cargas academicas, estudiantes, docentes, boletines, cursos',
+        imagesUrl: '/images/projects/aves/',
+        cover: 'cover.png',
+        images: [],
+        url: '',
+        github: '',
+        category: 'development',
+        type: 'Web',
+        languaje: 'PHP',
+        kind: 'Learning Management System',
+        stack: [
+          'PHP', 'MySQL', 'Javascript', 'CSS', 'HTML'
+        ],
+        isPublic: false,
+        company: 'Group SOCRATES'
+      },
+      {
+        id: 5,
+        title: 'OVAUnicor',
+        acronimus: 'Banco de Objetos de Aprendizaje ',
+        description: 'Banco de Objetos de Aprendizaje ',
+        features: 'Recursos de aprendizaje',
+        imagesUrl: '/images/projects/ovaunicor/',
+        cover: 'cover.png',
+        images: [],
+        url: '',
+        github: '',
+        category: 'development',
+        type: 'Web',
+        languaje: 'CakePHP',
+        kind: 'Learning Management System',
+        stack: [
+          'PHP', 'CakePHP', 'MySQL', 'Javascript', 'JQuery', 'CSS', 'HTML', 'Ajax'
+        ],
+        isPublic: false,
+        company: 'Group SOCRATES'
+      },
+      {
+        id: 6,
+        title: 'SIGAP',
+        acronimus: 'Sistema de control de proyectos',
+        description: 'Sistema de control de proyectos',
+        features: 'presupuesto, reportes',
+        imagesUrl: '/images/projects/sigap/',
+        cover: 'cover.png',
+        images: [],
+        url: '',
+        github: '',
+        category: 'desktop',
+        type: 'Desktop',
+        languaje: 'Delphi',
+        kind: 'Information Management System',
+        stack: [
+          'Delphi', 'Object Pascal', 'QuickReport', 'Firebase/Interbase'
+        ],
+        isPublic: false,
+        company: 'Group SOCRATES'
+      },
+    ];
 
 </script>
 
 <template>
+  
     <section class="min-h-[calc(100vh-110px)] pt-[120px] px-2 ProjectsSection">
         
         <div class="w-full flex items-center">
@@ -49,7 +185,15 @@
             </div>
         </header>
 
-        <div class="py-4 bg-slate-100 rounded-xl">
+        <div class="py-4 bg-slate-50 rounded-xl">
+            <section class="flex items-center flex-wrap projects-container">
+                <ProjectItem 
+                  :project="project" v-for="project in projects" 
+                  :key="'project'+project.id" />
+            </section>
+        </div>
+
+        <!-- <div class="py-4 bg-slate-50 rounded-xl">
             <section class="flex items-center flex-wrap projects-container">
                 <ProjectItem title="Proyecto 1" category="design" />
                 <ProjectItem title="Proyecto 2" category="development" />
@@ -62,7 +206,7 @@
                 <ProjectItem title="Proyecto 9" category="desktop" />
                 <ProjectItem title="Proyecto 10" category="development" />
             </section>
-        </div>
+        </div> -->
 
 
     </section>
@@ -70,28 +214,15 @@
 
 <style scoped>
 
-
-.filter_container .overlay {
-  position: absolute;
-  bottom: 10px;
-  left: 17px;
-  right: 0px;
-  background-color: #20C863;
-  overflow: hidden;
-  width: 90%;
-  height: 90%;
-  transform: scale(0);
-  transition: .3s ease;
-}
-
-.filter_container:hover .overlay {
-  transform: scale(1);
-}
-
 .active {
   width: 50%;
   transition: all 0.5s ease;
-  margin:0;
+}
+
+.delete {
+  width: 0%;
+  transition: all 0.5s ease;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 640px) {
@@ -117,9 +248,6 @@
     width: 16.66%;
   }
 }
-.delete {
-  width: 0%;
-  transition: all 0.5s ease;
-}
+
 
 </style>

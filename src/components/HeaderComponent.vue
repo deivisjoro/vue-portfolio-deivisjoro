@@ -50,13 +50,10 @@
                         <ul class="flex items-center text-sm font-semibold text-indigo-950">
                             <li class="px-2 py-1">
                                 <a href="#HomeSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('HomeSection')" style="--i:1" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*1))+'s' : (0.1*1)+'s' }">HOME</a>
-                            </li>
+                            </li>                            
                             <li class="px-2 py-1">
-                                <a href="#AboutSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('AboutSection')" style="--i:2" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*2))+'s' : (0.1*2)+'s' }">ABOUT</a>
+                                <a href="#ProjectsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ProjectsSection')" style="--i:2" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*2))+'s' : (0.1*2)+'s' }">PROJECTS</a>
                             </li>
-                            <!-- <li class="px-2 py-1">
-                                <a href="#" class="hover:text-[#ff4646] hover:border-b py-1 hover:border-[#ff4646]">ABOUT</a>
-                            </li> -->
                             <li class="px-2 py-1">
                                 <a href="#EducationSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('EducationSection')" style="--i:3" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*3))+'s' : (0.1*3)+'s' }">EDUCATION</a>
                             </li>
@@ -66,8 +63,9 @@
                             <li class="px-2 py-1">
                                 <a href="#ExperienceSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ExperienceSection')" style="--i:5" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*5))+'s' : (0.1*5)+'s' }">EXPERIENCE</a>
                             </li>
+                            
                             <li class="px-2 py-1">
-                                <a href="#ProjectsSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ProjectsSection')" style="--i:6" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*6))+'s' : (0.1*6)+'s' }">PROJECTS</a>
+                                <a href="#AboutSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('AboutSection')" style="--i:6" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*6))+'s' : (0.1*6)+'s' }">ABOUT</a>
                             </li>
                             <li class="px-2 py-1">
                                 <a href="#ContactSection" class="py-1 hover:text-[#ff4646]" @click.prevent="scrollToSection('ContactSection')" style="--i:7" :style="{ animationDelay: userStore.isIntro ? (2+(0.1*7))+'s' : (0.1*7)+'s' }">CONTACT</a>

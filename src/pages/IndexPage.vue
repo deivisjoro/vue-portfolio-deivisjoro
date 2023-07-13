@@ -59,9 +59,9 @@
         <div id="HomePage" class="max-w-[1200px] mx-auto py-3 bg-white rounded-lg">
             
             <div class="">
-                <HomeSection />
+                <HomeSection />                
 
-                <AboutSection />
+                <ProjectsSection />
 
                 <EducationSection />
 
@@ -69,7 +69,7 @@
 
                 <ExperienceSection />
 
-                <ProjectsSection />
+                <AboutSection />
 
                 <ContactSection /> 
             </div>           

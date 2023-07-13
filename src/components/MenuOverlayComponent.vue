@@ -47,9 +47,9 @@
                     </li>
                     <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" @click.prevent="scrollToSection('AboutSection')" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('ProjectsSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
-                                    <Icon icon="line-md:account-alert" width="24" class="mr-2" /> ABOUT
+                                    <Icon icon="mdi:projector-screen-outline" width="24" class="mr-2" /> PROJECTS
                                 </div>                                
                             </a>
                         </div>
@@ -81,11 +81,12 @@
                             </a>
                         </div>
                     </li>
+                    
                     <li class="relative flex items-center justify-between py-2.5 border-b px-3 hover:bg-gray-100">
                         <div class="flex items-center text-[16px] font-semibold">
-                            <a href="#" @click.prevent="scrollToSection('ProjectsSection')" class="hover:text-[#ff4646] py-1 pl-4">
+                            <a href="#" @click.prevent="scrollToSection('AboutSection')" class="hover:text-[#ff4646] py-1 pl-4">
                                 <div class="flex">
-                                    <Icon icon="mdi:projector-screen-outline" width="24" class="mr-2" /> PROJECTS
+                                    <Icon icon="line-md:account-alert" width="24" class="mr-2" /> ABOUT
                                 </div>                                
                             </a>
                         </div>
