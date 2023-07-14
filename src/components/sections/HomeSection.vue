@@ -117,7 +117,8 @@
                                 distance: 200,
                                 duration: 0.4
                             }
-                        }
+                        },
+                        detectsOn: 'canvas'
                     },
                     particles: {
                         color: {
