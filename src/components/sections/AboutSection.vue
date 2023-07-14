@@ -17,7 +17,7 @@
         <div class="text-indigo-950 mx-2 px-2 mt-3 text-sm flex items-center w-full flex-col md:flex-row">
             <div class="text-white mr-4">
                 <div class="flex md:flex-col flex-row">
-                    <div class="relative w-[100px] h-[100px] bg-indigo-950 rounded-full text-center m-[20px] flex items-center justify-center">
+                    <div class="relative w-[100px] h-[100px] bg-indigo-950 rounded-full text-center md:m-[20px] m-[10px] flex items-center justify-center">
                         <div>
                             <h5 class="absolute top-[-5px] left-0 w-[35px] h-[35px] bg-amber-400 rounded-full leading-[5px] font-medium  flex items-center justify-center">15+</h5>
                         </div>
@@ -25,7 +25,7 @@
                             <h3>Years of Experience</h3>
                         </div>
                     </div>
-                    <div class="relative w-[100px] h-[100px] bg-indigo-950 rounded-full text-center m-[20px] flex items-center justify-center">
+                    <div class="relative w-[100px] h-[100px] bg-indigo-950 rounded-full text-center md:m-[20px] m-[10px] flex items-center justify-center">
                         <div>
                             <h5 class="absolute top-[-5px] left-0 w-[35px] h-[35px] bg-amber-400 rounded-full font-medium flex items-center justify-center">50+</h5>
                         </div>

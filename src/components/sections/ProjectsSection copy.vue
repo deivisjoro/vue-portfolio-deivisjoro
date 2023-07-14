@@ -18,7 +18,7 @@
     })
 
     const sortAndShow = (e) => {
-      let dataTarget = 'Development';
+      let dataTarget = 'development';
 
       if(e){
         dataTarget = e.target.getAttribute('data-target');          
@@ -73,9 +73,9 @@
             <div class="flex items-center">
                 <span>Filter: </span>
                 <ul class="mr-2 flex">
-                    <li data-target="Development" class="px-2 mx-1 py-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='Development'}" @click="sortAndShow">Web Development</li>
-                    <li data-target="Design" class="px-2 mx-1 p-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='Design'}" @click="sortAndShow">Web Design</li>                    
-                    <li data-target="Desktop" class="px-2 mx-1 py-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='Desktop'}" @click="sortAndShow">Desktop Development</li>
+                    <li data-target="development" class="px-2 mx-1 py-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='development'}" @click="sortAndShow">Web Development</li>
+                    <li data-target="design" class="px-2 mx-1 p-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='design'}" @click="sortAndShow">Web Design</li>                    
+                    <li data-target="desktop" class="px-2 mx-1 py-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='desktop'}" @click="sortAndShow">Desktop Development</li>
                     <li data-target="all" class="px-2 mx-1 py-1 rounded-md hover:bg-indigo-950 hover:text-white text-indigo cursor-pointer border-solid border-indigo-950 border-[1px] flex items-center text-xs md:text-sm" :class="{'bg-indigo-950 text-white': filter=='all'}" @click="sortAndShow">All</li>
                 </ul>
             </div>
@@ -104,9 +104,8 @@
                               </span>
                             </div>
                           </div>
-                          <div class="flex md:flex-row flex-col w-full"> 
-
-                            <div class="md:w-[50%] bg-white p-3 rounded-lg md:mb-2 mb-0">
+                          <div class="flex md:flex-row flex-col gap-4 justify-between mx-auto w-full">                            
+                            <div class="md:w-[50%] bg-white p-3 rounded-lg mb-2">
                               <div>
                                 <div class="space-y-1">
                                   <h3 class="text-xl font-bold sm:text-2xl text-indigo-800">
@@ -191,47 +190,24 @@
                                   </span>
                                 </p>
                               </div>
-
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">Stack</h4>
-                                <p class="text-xs font-light flex flex-wrap">
-                                  <span v-for="stack in projectSelected.stack" :key="stack" class="py-1 px-2 mr-1 rounded shadow text-xs bg-blue-400 font-semibold text-white my-1">
-                                    {{ stack }}
-                                  </span>
-                                </p>
-                              </div>
-                              <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">GitHub</h4>
+                                <h4 class="text-red-500 text-sm">Type</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span class="text-xs font-semibold">
-                                    <a :href="projectSelected.github" v-if="projectSelected.isPublic" class="flex items-center hover:text-blue-700">
-                                      <Icon icon="heroicons-solid:external-link" width="12" /> 
-                                      {{ projectSelected.github }}
-                                    </a>
-                                    <span v-else>The project is private</span>
+                                    {{ projectSelected.type }}
                                   </span>
                                 </p>
                               </div>
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">URL</h4>
+                                <h4 class="text-red-500 text-sm">Languaje</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span class="text-xs font-semibold">
-                                    <a :href="projectSelected.url" v-if="projectSelected.isPublic" class="flex items-center  hover:text-blue-700">
-                                      <Icon icon="heroicons-solid:external-link" width="12" />
-                                      {{ projectSelected.url }}
-                                    </a>
-                                    <span v-else>The project is private</span>
+                                    {{ projectSelected.languaje }}
                                   </span>
                                 </p>
                               </div>
-                              
                             </div>
-                            <div class="md:w-[50%] bg-white p-3 md:m-2 m-0">
-                              <div class="mt-1">
-                                <h4 class="text-red-500 text-sm mb-2">
-                                  Galery
-                                </h4>                               
-                              </div>
+                            <div class="md:w-[50%] bg-white p-3 rounded-lg shadow m-2">
                               <div class="shadow rounded p-1 relative">
                                 <img class="rounded-lg object-fit" :src="projectSelected.imagesUrl+currentImage.name" alt="image project">
                                 <div class="absolute bottom-0 left-0 w-full h-[20%] bg-black opacity-60 flex flex-col items-center justify-center text-white text-sm">
@@ -252,6 +228,74 @@
                                   :class="currentImage.name===image.name?'border-red-600 hover:border-red-600':''" :src="projectSelected.imagesUrl+image.name" alt="imagen project" @click="setCurrentImage(index)">
                                 </div>
                                 
+                              </div>
+                            </div>
+                          </div>
+                          <div class="border-b"></div>
+                          <div class="p-2">
+                            <h3 class="text-indigo-900 font-semibold text-base">
+                              Others details
+                            </h3>
+                            <div class="flex md:flex-row flex-col">
+                              <div class="flex-1">
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">Category</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span class="text-xs font-semibold">
+                                      {{ projectSelected.category }}
+                                    </span>
+                                  </p>
+                                </div>
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">Kind</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span class="text-xs font-semibold">
+                                      {{ projectSelected.kind }}
+                                    </span>
+                                  </p>
+                                </div>
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">Privacy Source Code</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span class="text-xs font-semibold">
+                                      {{ projectSelected.isPublic ? 'Public' : 'Private' }}
+                                    </span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="flex-1">
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">Stack</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span v-for="stack in projectSelected.stack" :key="stack" class="py-1 px-2 mr-1 rounded shadow text-xs bg-blue-400 font-semibold text-white my-1">
+                                      {{ stack }}
+                                    </span>
+                                  </p>
+                                </div>
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">GitHub</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span class="text-xs font-semibold">
+                                      <a :href="projectSelected.github" v-if="projectSelected.isPublic" class="flex items-center hover:text-blue-700">
+                                        <Icon icon="heroicons-solid:external-link" width="12" /> 
+                                        {{ projectSelected.github }}
+                                      </a>
+                                      <span v-else>The project is private</span>
+                                    </span>
+                                  </p>
+                                </div>
+                                <div class="mt-2">
+                                  <h4 class="text-red-500 text-sm">URL</h4>
+                                  <p class="text-xs font-light flex flex-wrap">
+                                    <span class="text-xs font-semibold">
+                                      <a :href="projectSelected.url" v-if="projectSelected.isPublic" class="flex items-center  hover:text-blue-700">
+                                        <Icon icon="heroicons-solid:external-link" width="12" />
+                                        {{ projectSelected.url }}
+                                      </a>
+                                      <span v-else>The project is private</span>
+                                    </span>
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>

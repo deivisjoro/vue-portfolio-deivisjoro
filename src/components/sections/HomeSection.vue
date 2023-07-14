@@ -22,7 +22,7 @@
                     <div class="mb-2 text-indigo-950 text-2xl font-medium leading-5 flex justify-center md:justify-start items-center">
                         Hi <span class="wave">👋</span>, i'm 
                     </div>
-                    <div class="text-5xl mb-3 md:text-left text-center font-extrabold text-indigo-950 section" id="HomeSection">DEIVIS RODRIGUEZ</div>
+                    <div class="md:text-4xl lg:text-5xl text-2xl mb-3 md:text-left text-center font-extrabold text-indigo-950 section" id="HomeSection">DEIVIS RODRIGUEZ</div>
 
                     <!-- <div class="my-4 opacity-100 transform-none flex justify-center md:justify-start">
                         <div class="w-[300px] h-[68px] overflow-hidden relative flex justify-center md:justify-start">
@@ -47,7 +47,7 @@
 
                     </div> -->
                     <!-- fin -->
-                    <p class="text-3xl mb-1 text-amber-500 font-medium role flex justify-center md:justify-start">
+                    <p class="md:text-2xl lg:text-3xl text-xl mb-1 text-amber-500 font-medium role flex justify-center md:justify-start">
                         I Develop Software
                     </p>
                     <div class="description flex justify-center md:justify-start flex-col text-indigo-950">
