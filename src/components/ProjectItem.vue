@@ -17,11 +17,11 @@
     <div class="self-stretch w-[100%] min-[450px]:w-[50%] sm:w-[33.3%] md:w-[25%] lg:w-[20%] xl:w-[16.66%] group my-1" :data-category="project.category">
         <div class="p-2 w-full h-full">
             <div class="bg-white rounded-md p-1 relative overflow-hidden shadow h-full">
-                <div class="">
+                <div class="h-full flex flex-col">
                     <div class="overflow-hidden">
                         <img :src="project.imagesUrl+project.cover" :alt="'image project '+project.title" class="block w-full h-auto mx-auto group-hover:scale-125 scale-100 transition-all duration-500">
                     </div>
-                    <div class="flex flex-col justify-between">
+                    <div class="flex flex-col justify-between flex-1">
                         <h4 class="text-center py-1 mt-2 text-base font-semibold text-amber-500"> 
                             {{ project.title }}
                         </h4>
@@ -29,9 +29,9 @@
                             {{ project.acronimus }}
                         </h5>
                         <div class="p-1 my-1 flex justify-center items-center flex-wrap">
-                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white">{{ project.type }}</span>
-                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white">{{ project.languaje }}</span>
-                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white">{{ project.kind }}</span>
+                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white flex items-center justify-center text-center">{{ project.type }}</span>
+                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white flex items-center justify-center text-center">{{ project.languaje }}</span>
+                            <span class="p-2 m-1 rounded shadow text-xs bg-blue-400 font-semibold text-white flex items-center justify-center text-center">{{ project.kind }}</span>
                         </div>
                     </div>
                 </div>

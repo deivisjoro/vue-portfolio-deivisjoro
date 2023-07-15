@@ -106,7 +106,7 @@
                           </div>
                           <div class="flex md:flex-row flex-col w-full"> 
 
-                            <div class="md:w-[50%] bg-white p-3 rounded-lg md:mb-2 mb-0">
+                            <div class="md:w-[50%] bg-white p-3 rounded-lg md:mb-2 mb-0 md:border mt-1 mx-1">
                               <div>
                                 <div class="space-y-1">
                                   <h3 class="text-xl font-bold sm:text-2xl text-indigo-800">
@@ -119,16 +119,16 @@
                                   {{ projectSelected.description }}
                                 </p>
                               </div>
-                              <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">Features</h4>
+                              <div class="mt-2 border-b">
+                                <h4 class="text-indigo-800 text-sm font-semibold">Features</h4>
                                 <p class="text-xs font-semibold">
                                   {{ projectSelected.features }}
                                 </p>
                               </div>
 
-                              <div class="mt-2 flex">
+                              <div class="mt-2 flex border-b">
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Company</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Company</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.company }}
@@ -136,7 +136,7 @@
                                   </p>
                                 </div>
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Kind</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Kind</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.kind }}
@@ -145,9 +145,9 @@
                                 </div>
                               </div>
 
-                              <div class="mt-2 flex">
+                              <div class="mt-2 flex border-b">
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Privacy Source Code</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Privacy Source Code</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.isPublic ? 'Public' : 'Private' }}
@@ -155,7 +155,7 @@
                                   </p>
                                 </div>
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Category</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Category</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.category }}
@@ -164,9 +164,9 @@
                                 </div>
                               </div>
 
-                              <div class="mt-2 flex">
+                              <div class="mt-2 flex border-b">
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Type</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Type</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.type }}
@@ -174,7 +174,7 @@
                                   </p>
                                 </div>
                                 <div class="flex-1">
-                                  <h4 class="text-red-500 text-sm">Languaje</h4>
+                                  <h4 class="text-indigo-800 text-sm font-semibold">Languaje</h4>
                                   <p class="text-xs font-light flex flex-wrap">
                                     <span class="text-xs font-semibold">
                                       {{ projectSelected.languaje }}
@@ -184,7 +184,7 @@
                               </div>
 
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">Rols</h4>
+                                <h4 class="text-indigo-800 text-sm font-semibold">Rols</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span v-for="rol in projectSelected.roles" :key="rol" class="py-1 px-2 mr-1 rounded shadow text-xs bg-amber-400 font-semibold text-white my-1">
                                     {{ rol }}
@@ -193,7 +193,7 @@
                               </div>
 
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">Stack</h4>
+                                <h4 class="text-indigo-800 text-sm font-semibold">Stack</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span v-for="stack in projectSelected.stack" :key="stack" class="py-1 px-2 mr-1 rounded shadow text-xs bg-blue-400 font-semibold text-white my-1">
                                     {{ stack }}
@@ -201,7 +201,7 @@
                                 </p>
                               </div>
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">GitHub</h4>
+                                <h4 class="text-indigo-800 text-sm font-semibold">GitHub</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span class="text-xs font-semibold">
                                     <a :href="projectSelected.github" v-if="projectSelected.isPublic" class="flex items-center hover:text-blue-700">
@@ -213,7 +213,7 @@
                                 </p>
                               </div>
                               <div class="mt-2">
-                                <h4 class="text-red-500 text-sm">URL</h4>
+                                <h4 class="text-indigo-800 text-sm font-semibold">URL</h4>
                                 <p class="text-xs font-light flex flex-wrap">
                                   <span class="text-xs font-semibold">
                                     <a :href="projectSelected.url" v-if="projectSelected.isPublic" class="flex items-center  hover:text-blue-700">
@@ -226,9 +226,9 @@
                               </div>
                               
                             </div>
-                            <div class="md:w-[50%] bg-white p-3 md:m-2 m-0">
+                            <div class="md:w-[50%] bg-white p-3 rounded-lg md:mb-2 mb-0 md:border mt-1 mx-1">
                               <div class="mt-1">
-                                <h4 class="text-red-500 text-sm mb-2">
+                                <h4 class="text-indigo-800 text-sm mb-2 font-semibold">
                                   Galery
                                 </h4>                               
                               </div>
