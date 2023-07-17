@@ -720,6 +720,311 @@ const projects = [
       company: 'Carlos Combatt',
       roles: ['Developer', 'Analyst', 'Tester', 'Designer']
     },
+    {
+      id: 24,
+      title: 'Sistema de Control de Obras',
+      acronimus: 'Sistema de Control de Obras',
+      description: 'Works Control System, workers, materials, quantities, reports',
+      features: 'Works Control System, workers, materials, quantities, reports',
+      imagesUrl: '/images/projects/sico/',
+      cover: 'cover.png',
+      images: [
+        {name: 'sico1.png', description: 'Access control'},
+        {name: 'sico2.png', description: 'Dashboard users admin'},
+        {name: 'sico3.png', description: 'List of workers'},
+        {name: 'sico4.png', description: 'List of sub-activities'},
+        {name: 'sico5.png', description: 'Work log'},
+        {name: 'sico6.png', description: 'Time control reports'},
+        {name: 'sico7.png', description: 'Quantity reports'},
+      ],
+      url: '',
+      github: '',
+      category: 'Development',
+      type: 'Web',
+      languaje: 'CakePHP',
+      kind: 'Information Management System',
+      stack: [
+        'PHP', 'CakePHP', 'MySQL', 'Javascript', 'JQuery', 'Prototype', 'CSS', 'HTML', 'PHPExcel', 'PHPExcel Reader'
+      ],
+      isPublic: false,
+      company: 'Constructions Crearts S.A.S',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 25,
+      title: 'ABCTic',
+      acronimus: 'ABCTic',
+      description: 'Educational Software to Support the Solution of Reading-Writing Difficulties',
+      features: 'Activities Reading-Writing ',
+      imagesUrl: '/images/projects/abctic/',
+      cover: 'cover.png',
+      images: [
+        {name: 'abctic1.png', description: 'App load'},
+        {name: 'abctic2.png', description: 'Dashboard. Activity selection'},
+      ],
+      url: '',
+      github: '',
+      category: 'Desktop',
+      type: 'Desktop',
+      languaje: 'Delphi',
+      kind: 'Educational Exerciser',
+      stack: [
+        'Delphi', 'Object Pascal'
+      ],
+      isPublic: false,
+      company: 'Carlos Morales - Juan Garces',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 26,
+      title: 'Snake Game',
+      acronimus: 'Snake Game',
+      description: 'Snake game developed with delphi, it has levels, the higher the speed, the higher the difficulty',
+      features: 'Game',
+      imagesUrl: '/images/projects/snake/',
+      cover: 'cover.png',
+      images: [
+      ],
+      url: '',
+      github: '',
+      category: 'Desktop',
+      type: 'Desktop',
+      languaje: 'Delphi',
+      kind: 'Game',
+      stack: [
+        'Delphi', 'Object Pascal'
+      ],
+      isPublic: false,
+      company: 'DeivisJRO',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 27,
+      title: 'Tecnicintas PC',
+      acronimus: 'Inventario y Facturacion',
+      description: 'App for inventory and billing of products of the company Tecnicintas PC',
+      features: 'Sales, inventory, reportes',
+      imagesUrl: '/images/projects/tecnicintas/',
+      cover: 'cover.png',
+      images: [
+        {name: 'tecnicintas1.png', description: 'App load'},
+      ],
+      url: '',
+      github: '',
+      category: 'Desktop',
+      type: 'Desktop',
+      languaje: 'Delphi',
+      kind: 'Inventory and Billing',
+      stack: [
+        'Delphi', 'Object Pascal', 'QuickReport', 'Firebase/Interbase'
+      ],
+      isPublic: false,
+      company: 'Tecnicintas PC',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 28,
+      title: 'Foadecor',
+      acronimus: 'Sistema de Información Foadecor',
+      description: 'System for the control and follow-up of the members of the different organizations',
+      features: 'Information manager',
+      imagesUrl: '/images/projects/foadecor/',
+      cover: 'cover.png',
+      images: [
+        {name: 'foadecor1.png', description: 'Access control'},
+        {name: 'foadecor2.png', description: 'Dashboard user admin'},
+        {name: 'foadecor3.png', description: 'Company information'},
+        {name: 'foadecor4.png', description: 'Organization entry form'},
+      ],
+      url: '',
+      github: '',
+      category: 'Development',
+      type: 'Web',
+      languaje: 'CakePHP',
+      kind: 'Information Manager',
+      stack: [
+        'PHP', 'CakePHP', 'MySQL', 'Javascript', 'JQuery', 'JQuery UI', 'DataTable', 'CSS', 'HTML'
+      ],
+      isPublic: false,
+      company: 'Foadecor',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 29,
+      title: 'Kplace',
+      acronimus: 'Clone Kplace',
+      description: 'Application for taking exams in the digital citizen certification',
+      features: 'Tests',
+      imagesUrl: '/images/projects/kplace/',
+      cover: 'cover.png',
+      images: [
+        {name: 'kplace1.png', description: 'Certification exam selection window'},
+        {name: 'kplace2.png', description: 'Exam Selection'},
+        {name: 'kplace3.png', description: 'Selected exam data'},
+        {name: 'kplace4.png', description: 'Enter activation code'},
+        {name: 'kplace5.png', description: 'Quiz question'},
+        {name: 'kplace6.png', description: 'Quiz result'},
+      ],
+      url: '',
+      github: '',
+      category: 'Desktop',
+      type: 'Desktop',
+      languaje: 'Delphi',
+      kind: 'Quiz App',
+      stack: [
+        'Delphi', 'Object Pascal', 'QuickReport', 'Firebase/Interbase'
+      ],
+      isPublic: false,
+      company: 'ICDL',
+      roles: ['Developer', 'Analyst', 'Tester', 'Designer']
+    },
+    {
+      id: 30,
+      title: 'Website La Poza',
+      acronimus: 'La Poza Educational Institution Website',
+      description: 'La Poza educational institution website',
+      features: 'Website',
+      imagesUrl: '/images/projects/lapoza/',
+      cover: 'cover.png',
+      images: [
+      ],
+      url: '',
+      github: '',
+      category: 'Design',
+      type: 'Web',
+      languaje: 'HTML',
+      kind: 'Website',
+      stack: [
+        'HTML', 'CSS', 'Javascript'
+      ],
+      isPublic: false,
+      company: 'La Poza Educational Institution',
+      roles: ['Developer', 'Designer']
+    },
+    {
+      id: 31,
+      title: 'Monteria Digital',
+      acronimus: 'Web Monteria Digital',
+      description: 'Website of the monteria digital initiative',
+      features: 'Information management',
+      imagesUrl: '/images/projects/monteriadigital/',
+      cover: 'cover.png',
+      images: [
+        {name: 'monteriadigital1.png', description: 'Full main page'},
+        {name: 'monteriadigital2.png', description: 'Users Management'},
+        {name: 'monteriadigital3.png', description: 'Published news management'},
+        {name: 'monteriadigital4.png', description: 'Survey administration'},
+      ],
+      url: '',
+      github: '',
+      category: 'Development',
+      type: 'Web',
+      languaje: 'PHP',
+      kind: 'CMS',
+      stack: [
+        'PHP', 'MySQL', 'Linux', 'CSS', 'HTML', 'Javascript', 'JQuery', 'JQuery UI', 'Ajax'
+      ],
+      isPublic: false,
+      company: 'Group SOCRATES',
+      roles: ['Developer', 'Analyst', 'Tester']
+    },
+    {
+      id: 32,
+      title: 'Relieve Estructural',
+      acronimus: 'Relieve Estructural',
+      description: 'Flash animation with simulations of the different types of structural relief',
+      features: 'Animations',
+      imagesUrl: '/images/projects/relieveestructural/',
+      cover: 'cover.png',
+      images: [
+        {name: 'relieveestructural1.png', description: 'Category information'},
+        {name: 'relieveestructural2.png', description: 'App start'},
+        {name: 'relieveestructural3.png', description: 'Category definition'},
+      ],
+      url: '',
+      github: '',
+      category: 'Design',
+      type: 'Animation',
+      languaje: 'Flash',
+      kind: 'Animation',
+      stack: [
+        'Flash', 'Action Script'
+      ],
+      isPublic: false,
+      company: 'Department of Geography University of Cordoba',
+      roles: ['Developer', 'Analyst', 'Tester']
+    },
+    {
+      id: 33,
+      title: 'GeoTes',
+      acronimus: 'Tesauro Bilingue de Geomorfología Estructural',
+      description: 'Bilingual Thesaurus of Structural Geomorphology, development with TemaTres, the open source way to manage formal representations of knowledge',
+      features: 'Tesauro',
+      imagesUrl: '/images/projects/geotes/',
+      cover: 'cover.png',
+      images: [
+        {name: 'geotes1.png', description: 'Introduction to the topic'},
+        {name: 'geotes2.png', description: 'Access page'},
+      ],
+      url: '',
+      github: '',
+      category: 'Design',
+      type: 'Web',
+      languaje: 'TemaTres',
+      kind: 'CMS',
+      stack: [
+        'TemaTres', 'PHP', 'MySQL'
+      ],
+      isPublic: false,
+      company: 'Department of Geography University of Cordoba',
+      roles: ['Developer', 'Analyst', 'Tester']
+    },
+    {
+      id: 34,
+      title: 'Politecnico Superior San Jose',
+      acronimus: 'Website San Jose Superior Polytechnic',
+      description: 'Website San Jose Superior Polytechnic',
+      features: 'Website',
+      imagesUrl: '/images/projects/sanjose/',
+      cover: 'cover.png',
+      images: [
+      ],
+      url: '',
+      github: '',
+      category: 'Design',
+      type: 'Web',
+      languaje: 'HTML',
+      kind: 'Website',
+      stack: [
+        'HTML', 'CSS', 'Javascript', 'Joomla'
+      ],
+      isPublic: false,
+      company: 'San Jose Superior Polytechnic',
+      roles: ['Developer', 'Designer']
+    },
+    {
+      id: 35,
+      title: 'Website CCM',
+      acronimus: 'Website Monteria Chamber of Commerce',
+      description: 'Website Monteria Chamber of Commerce',
+      features: 'Website',
+      imagesUrl: '/images/projects/ccm/',
+      cover: 'cover.png',
+      images: [
+      ],
+      url: '',
+      github: '',
+      category: 'Design',
+      type: 'Web',
+      languaje: 'HTML',
+      kind: 'Website',
+      stack: [
+        'HTML', 'CSS', 'Javascript'
+      ],
+      isPublic: false,
+      company: 'Monteria Chamber of Commerce',
+      roles: ['Developer']
+    },
   ];
 
   export default projects;
