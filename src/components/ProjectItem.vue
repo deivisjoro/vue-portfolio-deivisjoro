@@ -51,13 +51,25 @@
                             <Icon icon="grommet-icons:gallery" width="20" />
                             <Icon icon="mdi:eye" width="20" />
                         </span> -->
-                        <span class="p-2 m-1 border-solid border-white border-[1px] rounded shadow text-white" :class="{'hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-black hover:cursor-pointer': project.github}">                            
-                            <Icon icon="iconamoon:link-external-bold" width="25" />
-                            <Icon :icon="!project.url ? 'mdi:eye-off' : 'mdi:eye'" width="25" />
+                        <span class="p-2 m-1 border-solid border-white border-[1px] rounded shadow text-white" :class="{'hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-black hover:cursor-pointer': project.isPublic && project.url}">  
+                            <a :href="project.url" class="flex items-center flex-col" v-if="project.isPublic && project.url">                  
+                                <Icon icon="iconamoon:link-external-bold" width="25" />
+                                <Icon icon="mdi:eye" width="25" />
+                            </a>  
+                            <span v-else class="flex items-center flex-col">
+                                <Icon icon="iconamoon:link-external-bold" width="25" />
+                                <Icon icon="mdi:eye-off" width="25"/>
+                            </span>                        
                         </span>
-                        <span class="p-2 m-1 border-solid border-white border-[1px] rounded shadow text-white" :class="{'hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-black hover:cursor-pointer': project.github}">                            
-                            <Icon icon="mdi:github" width="25" />
-                            <Icon :icon="!project.github ? 'mdi:eye-off' : 'mdi:eye'" width="25" />
+                        <span class="p-2 m-1 border-solid border-white border-[1px] rounded shadow text-white" :class="{'hover:bg-white hover:border-red-500 hover:border-[2px] hover:text-black hover:cursor-pointer': project.isPublic && project.github}"> 
+                            <a :href="project.github" class="flex items-center flex-col" v-if="project.isPublic && project.github">
+                                <Icon icon="mdi:github" width="25" />
+                                <Icon icon="mdi:eye" width="25" />
+                            </a>    
+                            <span v-else class="flex items-center flex-col">
+                                <Icon icon="mdi:github" width="25" />
+                                <Icon icon="mdi:eye-off" width="25" />
+                            </span>                       
                         </span>
                     </div>                
                 </div>
