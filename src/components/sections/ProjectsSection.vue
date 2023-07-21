@@ -251,7 +251,6 @@
                                   <img width="70" class="rounded-md object-fit border-[3px] cursor-pointer hover:border-red-300" 
                                   :class="currentImage.name===image.name?'border-red-600 hover:border-red-600':''" :src="projectSelected.imagesUrl+image.name" alt="imagen project" @click="setCurrentImage(index)">
                                 </div>
-                                
                               </div>
                             </div>
                           </div>
