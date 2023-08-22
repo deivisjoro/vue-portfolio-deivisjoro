@@ -52,7 +52,7 @@
                 <section class="flex items-center slider overflow-x-hidden">
                     <CardSkill class="skill" title="HTML" icon="mdi:language-html5" iconColor="#ff4c1e" experience="15" category="Frontend" level="90" :items="['HTML5', 'Semantic']" />
 
-                    <CardSkill class="skill" title="CSS" icon="ion:logo-css3" iconColor="#006bc0" experience="15" category="Frontend" level="80" :items="['Media Query', 'Flexbox', 'Normalize', 'Bootstrap', 'Font Awesome', 'Animate', 'TailwindCSS', 'SASS', 'Responsible Design', 'Mobile First']" :iconsItems="[{name: 'mdi:sass', color:'#c65f91'}, {name: 'mdi:tailwind', color:'#07b0ce'}, {name: 'ri:bootstrap-line', color:'#7b11f8'}]" />
+                    <CardSkill class="skill" title="CSS" icon="ion:logo-css3" iconColor="#006bc0" experience="15" category="Frontend" level="80" :items="['Media Query', 'Flexbox', 'Bootstrap', 'Font Awesome', 'TailwindCSS', 'SASS', 'Responsible Design', 'Mobile First']" :iconsItems="[{name: 'mdi:sass', color:'#c65f91'}, {name: 'mdi:tailwind', color:'#07b0ce'}, {name: 'ri:bootstrap-line', color:'#7b11f8'}]" />
 
                     <CardSkill class="skill" title="Javascript" icon="tabler:brand-javascript" iconColor="#ffdf00" experience="15" category="Frontend" level="85" :items="['ES6+', 'Fetch API', 'JQuery', 'JQuery UI', 'SPA', 'DOM', 'API Rest', 'JSON', 'JWT']" :iconsItems="[ {name: 'mdi:code-json', color:'#9777a8'}, {name: 'mdi:jquery', color:'#0863a2'}]" />
 
@@ -76,11 +76,11 @@
 
                     <CardSkill class="skill" title="Tools" icon="vscode-icons:folder-type-tools" experience="4" category="Frontend/Backend" level="80" :items="['VS Code', 'Vite', 'WebPack', 'DevTools', 'Eclipse', 'Netbeans', 'Postman', 'Git', 'GitHub', 'Supabase', 'Excel']" :iconsItems="[ {name: 'skill-icons:vscode-light'}, {name: 'vscode-icons:file-type-vite'}, {name: 'skill-icons:webpack-light'}]" />
 
-                    <CardSkill class="skill" title="Testing" icon="vscode-icons:folder-type-test" experience="1" category="Testing" level="60" :items="['Unit testing', 'Vitest', 'JUnit', 'Screen Play', 'Serenety', 'Cucumber', 'Gherkin']" />
+                    <CardSkill class="skill" title="Testing" icon="vscode-icons:folder-type-test" experience="1" category="Testing" level="60" :items="['Unit testing', 'Vitest', 'Jest', 'JUnit', 'Screen Play', 'Serenety', 'Cucumber', 'Gherkin']" />
 
                     <CardSkill class="skill" title="Sys Admin" icon="clarity:rack-server-solid-badged" experience="2" category="Sys Admin" level="60" :items="['Linux', 'Ubuntu Server', 'Apache', 'Tomcat', 'SSH', 'DNS']" />	
 
-                    <CardSkill class="skill" title="Android Studio" icon="skill-icons:androidstudio-light" experience="1" category="Mobile" level="50" />	
+                    <CardSkill class="skill" title="Android Studio" icon="skill-icons:androidstudio-light" experience="1" category="IoT" level="50" />	
 
                     <CardSkill class="skill" title="Arduino" icon="devicon:arduino" experience="1" category="Mobile" level="50" />
 

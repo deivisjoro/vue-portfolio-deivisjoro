@@ -58,9 +58,9 @@
                         <p class="text-lg font-light leading-6 mb-3 flex justify-center md:justify-start mt-2">Based in Cerete, Colombia</p>
                     </div>
                     <div class="mt-4 btn-cv flex justify-center md:justify-start">
-                        <button class=" border-solid border-indigo-600 border text-indigo-950 bg-indigo-300 rounded-lg p-2 hover:bg-indigo-950 hover:text-white">
+                        <a class=" border-solid border-indigo-600 border text-indigo-950 bg-indigo-300 rounded-lg p-2 hover:bg-indigo-950 hover:text-white" href="/cv_deivis_rodriguez.pdf">
                             Download CV
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
